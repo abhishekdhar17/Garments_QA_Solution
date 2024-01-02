@@ -1,0 +1,192 @@
+﻿﻿.table tr {
+    cursor: pointer;
+}
+
+.page-heading {
+    min-height: calc(85vh - 120px);
+}
+
+.modal-form-control-sm {
+    border-radius: 1rem;
+    font-size: .75rem;
+    min-height: calc(1.5em + .5rem + 2px);
+    padding: .125rem .4rem;
+}
+
+.modal-form-select {
+    padding: .125rem 1.7rem .125rem .3rem;
+}
+
+.modal-sm-label {
+    margin-bottom: 0px;
+    font-size: 11px;
+}
+
+.modal-filter-row > * {
+    padding-left: calc(var(--bs-gutter-x)*.1);
+    padding-right: calc(var(--bs-gutter-x)*.1);
+}
+
+div.ui-datepicker {
+    font-size: 10px;
+}
+
+
+.month-picker-fieldset > input {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.month-picker-label, .month-picker-nav {
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 25px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+    input:focus + .month-picker-label, .month-picker-nav:focus {
+        outline: 2px solid #5e9ed7;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+.month-picker-label {
+    position: relative;
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 200;
+    color: #8d8ba6;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px black;
+}
+
+    .month-picker-label, .month-picker-label:before {
+        -webkit-transition: 0.15s ease-out;
+        -moz-transition: 0.15s ease-out;
+        -o-transition: 0.15s ease-out;
+        transition: 0.15s ease-out;
+    }
+
+        .month-picker-label:before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
+            border: 2px solid;
+            border-color: #e4e0fb #b6b1d1 #b6b1d1;
+            border-radius: 6px;
+            opacity: 0;
+            -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+input:checked + .month-picker-label {
+    color: white;
+    background: #302e42;
+    background-image: -webkit-linear-gradient(top, #302e42, #29253b);
+    background-image: -moz-linear-gradient(top, #302e42, #29253b);
+    background-image: -o-linear-gradient(top, #302e42, #29253b);
+    background-image: linear-gradient(to bottom, #302e42, #29253b);
+}
+
+    input:checked + .month-picker-label:before {
+        opacity: 1;
+    }
+
+.ui-state-active {
+    border: 1px solid #435ebe;
+}
+
+#draggable {
+    background-color: red;
+    color: lightblue;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-all-scroll {
+    cursor: all-scroll;
+}
+
+.modal .modal-header .close {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 1px 7px;
+}
+
+.modal .modal-footer {
+    padding: .5rem;
+}
+
+.modal-table-scroll {
+    overflow-y: auto;
+    height: 30vh;
+}
+
+    .table-scroll thead tr th {
+        position: sticky;
+        top: 0;
+    }
+/* Just common table stuff. Really. */
+.modal-table-scroll-head {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .modal-table-scroll-head thead tr th {
+        background: #dce7f1
+    }
+
+.modal-footer {
+    align-items: center;
+    border-bottom-left-radius: calc(.3rem - 1px);
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-top: 1px solid #dee2e6;
+    display: inline-block;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: .75rem;
+}
+
+.modal-table-scroll-head tr {
+    cursor: pointer;
+}
+.modal-modal-body {
+    flex: 1 1 auto;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    position: relative;
+}
+/**/
+
+.asterisk:before {
+    content: " *";
+    color: red;
+}
+
+.card-header {
+    padding: .7rem;
+}
+
+
+/*
+@media (min-width: 1200px) {
+    .h3, h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0rem
+    }
+}
+
+option:disabled {
+    color: red;
+}
+
+.card .card-body {
+    padding: 1rem;
+}
+*/

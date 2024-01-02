@@ -1,0 +1,217 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card mt-2 shadow">
+    <h5 class="card-header bg-primary text-white">
+        Team
+        <button class="btn btn-success float-end" id="ls_add_team_btn" name="ls_add_team_btn">Add Teams</button>
+    </h5>
+    <div class="card-body">
+        <div class="table-responsive mt-3">
+            <table class="table table-responsive table-hover" id="ls_team_table">
+                <thead>
+                    <tr class="text-center">
+                        <th>SL</th>
+                        <th>Department</th>
+                        <th>Team Name</th>
+                        <th>Team Leaders</th>
+                        <th>Team Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="ls_team_table_tbody">
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <!--table spinner-->
+            <div class="col-md-offset-4">
+                <div class="text-center" id="ls_team_loading_spinner">
+                    <img src="~/Content/assets/vendors/svg-loaders/rings.svg" class="" style="width: 3rem" alt="audio"><span style="font-weight: 700">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- team add modal -->
+<div class="modal fade bd-example-modal" id="add_team_modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title white">
+                    Add Team
+                </h5>
+                <button type="button" class="close text-white"
+                        data-bs-dismiss="modal" aria-label="Close">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <form id="ls_add_team_modal_form" name="ls_add_team_modal_form" class="needs-validation" novalidate>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ls_add_team_department"><span class="text-danger">*</span> Department Name</label>
+                        <select id="ls_add_team_department" name="ls_add_team_department" class="form-control form-select" required>
+                            <option value="-1" selected>Select Department...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select department name.
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                            <label for="ls_add_team_designation"><span class="text-danger">*</span> Designation Name</label>
+                            <select id="ls_add_team_designation" name="ls_add_team_designation" class="form-control form-select" required>
+                                <option value="-1" selected>Select Designation...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select designation name.
+                            </div>
+                        </div>*@
+                    <div class="form-group">
+                        <label for="ls_add_team_leader"><span class="text-danger">*</span> Team Leader Name</label>
+                        <select id="ls_add_team_leader" name="ls_add_team_leader" class="form-control form-select select2" style="width:100%"  multiple>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select one or multiple Team Leader.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ls_add_team_name"><span class="text-danger">*</span> Team Name</label>
+                        <input type="text" class="form-control" id="ls_add_team_name" name="ls_add_team_name" placeholder="Enter team name" required>
+                        <div class="invalid-feedback">
+                            Please enter team name.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ls_add_team_status"><span class="text-danger">*</span> Team Status</label>
+                        <select id="ls_add_team_status" name="ls_add_team_status" class="form-control form-select" required>
+                            <option value="" selected>Select Team Status</option>
+                            <option value="1">Active</option>
+                            <option value="0">In-Active</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select Team status.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="ls_add_team_close" class="btn btn-light-secondary rounded-pill" data-bs-dismiss="modal">
+                        <i class="bx bx-x d-block d-sm-none"></i><span class="d-none d-sm-block">Close</span>
+                    </button>
+                    <button type="submit" class="btn btn-primary rounded-pill ml-1">
+                        <i class="bx bx-check d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Save</span>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<!--team delete modal-->
+<div class="modal fade bd-example-modal" id="ls_delete_team_modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title white">
+                    Delete Team
+                </h5>
+                <button type="button" class="close text-white"
+                        data-bs-dismiss="modal" aria-label="Close">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <form id="ls_delete_team_modal_form" name="ls_delete_team_modal_form" class="needs-validation" novalidate>
+                <div class="modal-body">
+                    <input type="hidden" class="form-control" id="ls_delete_team_id_hidden" name="ls_delete_team_id_hidden">
+                    <p class="text-dark">Do you really want to delete this record? This process cannot be undone</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-secondary rounded-pill" data-bs-dismiss="modal">
+                        <i class="bx bx-x d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Close</span>
+                    </button>
+                    <button type="submit" class="btn btn-danger rounded-pill ml-1">
+                        <i class="bx bx-check d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Yes,Delete</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- team Update Modal-->
+<div class="modal bd-example-modal" id="ls_edit_team_modal">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <div>
+                    <h5 class="modal-title white">
+                        Update Team
+                    </h5>
+                    <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close">
+                        <i data-feather="x"></i>
+                    </button>
+                </div>
+            </div>
+            <form id="ls_edit_team_modal_form" name="ls_edit_team_modal_form" class="needs-validation" novalidate>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ls_edit_team_department"><span class="text-danger">*</span> Department Name</label>
+                        <select id="ls_edit_team_department" name="ls_edit_team_department" class="form-control form-select" required>
+                            <option value="-1" selected>Select Department...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select department name.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ls_edit_team_leader"><span class="text-danger">*</span> Team Leader Name</label>
+                        <select id="ls_edit_team_leader" name="ls_edit_team_leader" class="form-control form-select select2" style="width:100%"  multiple>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select one or multiple Team Leader.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ls_edit_team_name"><span class="text-danger">*</span>Team Name</label>
+                        <input type="text" class="form-control" id="ls_edit_team_name" name="ls_edit_team_name" placeholder="Enter team name" required />
+                        <div class="invalid-feedback">
+                            Please enter team name.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ls_edit_team_status"><span class="text-danger">*</span>Team Status</label>
+                        <select id="ls_edit_team_status" name="ls_edit_team_status" class="form-control" required>
+                            <option value="" selected>Select team Status</option>
+                            <option value="1">Active</option>
+                            <option value="0">In-Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light-secondary rounded-pill" data-bs-dismiss="modal">
+                        <i class="bx bx-x d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Close</span>
+                    </button>
+                    <button type="submit" class="btn btn-primary rounded-pill ml-1">
+                        <i class="bx bx-check d-block d-sm-none"></i>
+                        <span class="d-none d-sm-block">Save Changes</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $("#LibrarySetups_li").addClass("active");
+        $("#LibrarySetups_ul").addClass("active");
+        $("#teams").addClass("active");
+    </script>
+    <script src="~/LibrarySetups/Scripts/ls.teams.js"></script>
+
+}
+

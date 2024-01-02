@@ -1,0 +1,826 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=0">
+    <title>@ViewBag.Title || Garments_QA Solution</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    @RenderSection("styletime", required: false)
+
+
+    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/toastify/toastify.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="~/Content/assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/Content/assets/css/app.css">
+
+    <!-- CSS Libraries -->
+
+    <link href="~/Content/assets/vendors/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/assets/vendors/izitoast/css/iziToast.min.css">
+    <link href="~/Content/DataTables/DataTables-1.10.25/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/datatables.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/favicon.png" type="image/x-icon">
+
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #435ebe;
+            -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        @@media (max-width: 1024px) {
+            .navbar {
+                left: 0px !important;
+                right: 0px !important;
+            }
+        }
+
+        .sidebar-wrapper .menu .sidebar-item.has-sub .sidebar-link:after {
+            filter: invert(98%) sepia(43%) saturate(3578%) hue-rotate( 179deg ) brightness(110%) contrast(105%);
+        }
+    </style>
+    <style>
+        .cursor-not-allowed {
+            cursor: not-allowed;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+        /*tbody:hover,
+        tr.hover,
+        th.hover,
+        td.hover,
+        .table-hover tbody tr:hover td,
+        .table-hover tbody tr:hover th {
+            background-color: #435ebe;
+            color: white;
+        }*/
+        /*tbody:hover td[rowspan],
+        tr:hover td {
+            background-color: #435ebe;
+            color: white;
+        }*/
+        .form-select {
+            padding: .375rem 2rem .375rem .75rem;
+        }
+
+        .sidebar-wrapper {
+            background-color: #25396f;
+        }
+
+            .sidebar-wrapper .menu .sidebar-item.active .sidebar-link {
+                background-color: steelblue;
+            }
+
+            .sidebar-wrapper .menu .sidebar-link i, .sidebar-wrapper .menu .sidebar-link svg {
+                color: #f2f7ff;
+            }
+
+            .sidebar-wrapper .menu .sidebar-link {
+                align-items: center;
+                border-radius: .5rem;
+                color: #f2f7ff;
+            }
+
+            .sidebar-wrapper .menu .sidebar-title {
+                color: #f2f7ff;
+            }
+
+            .sidebar-wrapper .menu .submenu .submenu-item a {
+                color: #f2f7ff;
+            }
+
+            .sidebar-wrapper .menu .submenu .submenu-item.active > a {
+                color: #01ffa1;
+            }
+
+            .sidebar-wrapper .menu {
+                font-weight: 600;
+                margin-top: 0rem;
+                padding: 0 2rem;
+            }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        .e-btn {
+            height: 2.8rem;
+            width: 2.8rem;
+        }
+
+        .table thead,
+        .table th {
+            text-align: center;
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+        .btn-filter {
+            background-color: #d6af75 !important;
+        }
+
+        .form-control {
+            line-height: 1.80;
+        }
+
+        .form-group label {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .dropdown-menu {
+            box-shadow: 0 0 30px #545454;
+        }
+    </style>
+
+    @RenderSection("styles", required: false)
+
+    <style>
+        .select2-container .select2-search__field {
+            padding: 0;
+            line-height: 1.5;
+            width: 100% !important;
+            padding: 0 0 0 7px !important;
+        }
+
+
+        .select2-container--default .select2-results > .select2-results__options {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            margin-top: 7px;
+            background-color: #435ebe;
+            border: 1px solid #435ebe;
+            color: white;
+        }
+
+        .select2-container--default .select2-selection--multiple {
+            border: 1px solid #dce7f1;
+            border-radius: .25rem;
+        }
+
+        .select2-container--default.select2-container--focus .select2-selection--multiple {
+            border: 1px solid #dce7f1;
+            outline: 0;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            margin-left: 2px;
+            float: right;
+            color: white;
+        }
+
+        .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-color: #a1afdf;
+            box-shadow: 0 0 0 0.25rem rgb(67 94 190 / 25%);
+            outline: 0;
+        }
+
+        .focus_item {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-color: #a1afdf;
+            box-shadow: 0 0 0 0.25rem rgb(67 94 190 / 25%);
+            outline: 0;
+        }
+
+        .card {
+            margin-bottom: 1rem;
+        }
+
+        #main #main-content {
+            padding: 1rem;
+        }
+
+        .sidebar-wrapper .sidebar-header {
+            font-size: 2rem;
+            font-weight: 700;
+            padding: .5rem 3.5rem;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: #fff;
+            border: 1px solid #dce7f1;
+            border-radius: 1rem;
+            font-size: .75rem;
+        }
+
+        .select-active {
+            background-color: #01ffa1;
+        }
+
+        .bg-tomato {
+            background: #ff6347;
+        }
+    </style>
+    <style>
+        .ui-datepicker th {
+            background: #435ebe !important;
+            color: white;
+        }
+
+        .ui-widget-header {
+            border: 1px solid rgb(67 94 190 / 25%);
+            background: rgb(67 94 190 / 25%);
+            color: #435ebe;
+        }
+
+        .ui-widget.ui-widget-content {
+            border: 1px solid #435ebe;
+        }
+
+        .asterisk:before {
+            content: "* ";
+            color: red;
+        }
+
+        .aliceblue {
+            background: aliceblue;
+        }
+
+        .lightgreen {
+            background: lightgreen;
+        }
+
+        .lightpink {
+            background: lightpink;
+        }
+
+        .deepskyblue {
+            background: deepskyblue;
+        }
+
+        .lightyellow {
+            background: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper shadow active">
+                <div class="sidebar-header" style="padding-bottom: 0px;">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            @*<a href="/a/index"><img src="~/Content/assets/images/logo/crbs_logo.png" class="h-100 w-100" alt="Logo" srcset=""></a>*@
+                            <a href="/a/index"><img src="~/Content/assets/images/logo/brand_logo.png" class="h-100 w-100" alt="Logo" srcset="" /></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block text-white"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-item has-sub" id="Admin_li">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Admin Panel</span>
+                            </a>
+                            <ul class="submenu" id="Admin_ul">
+                                <li class="submenu-item" id="admindashboard">
+                                    @*<a href="/a/users">Users</a>*@
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item" id="YourBooking_li">
+	                        <a href="/a/index" class='sidebar-link'>
+		                        <i class="bi bi-grid-1x2-fill"></i>
+		                        <span>Excel Upload</span>
+	                        </a>
+                        </li>
+                        
+                        <li class="sidebar-item" id="YourBooking_li">
+	                        <a href="/a/index" class='sidebar-link'>
+		                        <i class="bi bi-grid-1x2-fill"></i>
+		                        <span>Sewing Input</span>
+	                        </a>
+                        </li>
+                        
+                        <li class="sidebar-item" id="YourBooking_li">
+	                        <a href="/a/index" class='sidebar-link'>
+		                        <i class="bi bi-grid-1x2-fill"></i>
+		                        <span>Style Popup</span>
+	                        </a>
+                        </li>
+                        
+                        <li class="sidebar-item" id="YourBooking_li">
+	                        <a href="/a/index" class='sidebar-link'>
+		                        <i class="bi bi-grid-1x2-fill"></i>
+		                        <span>System ID Popup</span>
+	                        </a>
+                        </li>
+
+                        <li class="sidebar-item has-sub" id="_LibrarySetups_li">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Library Setups</span>
+                            </a>
+                            <ul class="submenu" id="_LibrarySetups_ul">
+                                
+	                            <li class="submenu-item" id="departments">
+		                            <a href="~/LibrarySetups/Views/Companies/Index.cshtml">Companies</a>
+	                            </li>
+
+	                            <li class="submenu-item" id="departments">
+                                    <a href="/department">Department</a>
+                                </li>
+                                
+                                <li class="submenu-item" id="departments">
+                                    <a href="/location">Locations</a>
+                                </li>
+                                <li class="submenu-item" id="designations">
+                                    <a href="/designation">Designations</a>
+                                </li>
+                                <li class="submenu-item" id="vehicles">
+                                    <a href="/vehicle">Vehicles</a>
+                                </li>
+                                <li class="submenu-item" id="vendors">
+                                    <a href="/vendor">Vendors</a>
+                                </li>
+                                <li class="submenu-item" id="teams">
+                                    <a href="/team">Teams</a>
+                                </li>
+                                <li class="submenu-item" id="vehicle_user_type">
+                                    <a href="/vehicleUserType">Vehicle User Type</a>
+                                </li>
+                            </ul>
+
+                        </li>
+
+                        <li class="sidebar-item has-sub" id="Users_li">
+	                        <a href="#" class='sidebar-link'>
+		                        <i class="bi bi-grid-1x2-fill"></i>
+		                        <span>Add User</span>
+	                        </a>
+                            <ul class="submenu" id="Users_li">
+
+                                <li class="submenu-item">
+                                    <a href="/Account/Register">Register Account</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="sidebar-item has-sub" id="">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>My Profiles</span>
+                            </a>
+                            <ul class="submenu" id="">
+
+                                <li class="submenu-item" >
+                                    <a href="/Account/Manage">Change Password</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        
+                      
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main" class='layout-navbar'>
+            <header class='mb-0'>
+                <nav class="navbar navbar-expand navbar-light shadow" style="background-color: #25396f;">
+                    <div class="container-fluid">
+                        <a href="#" class="burger-btn d-block text-white">
+                            <i class="bi bi-justify fs-3"></i>
+                            <i id="menu_icon"></i>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                                <li class="nav-item dropdown me-3">
+                                    <a class="nav-link" href="#" id="full">
+                                        <i class="bi bi-fullscreen bi-sub fs-4 text-gray-600"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown">
+                                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="user-menu d-flex">
+                                        <div class="user-name text-end me-3">
+                                            <h6 class="mb-0 text-white"></h6>
+                                            <p class="mb-0 text-sm text-white"></p>
+                                        </div>
+                                        <div class="user-img d-flex align-items-center">
+                                            <div class="avatar avatar-md">
+                                                <img src="~/Content/assets/images/faces/1.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="right: 0; top: 100%;">
+
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/">
+                                            <i class="icon-mid bi bi-box-arrow-left me-2" ></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <div id="main-content">
+
+	            <!--RenderBody Start Here-->
+                
+	            <div>
+		            <form>
+			            @RenderBody()
+		            </form>
+	            </div>
+	            
+
+                <!--RenderBody End Here-->
+
+
+                <footer>
+                    <div class="footer clearfix mb-0 text-dark">
+                        <div class="float-start">
+	                        <p>
+		                        All Rights Reserved
+	                        </p>
+                        </div>
+                        <div class="float-end">
+	                        <p>&copy; @DateTime.Now.Year - PACIFIC KNITEX LTD.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Content/assets/vendors/jquery/jquery.min.js"></script>
+
+    @*<script src="~/Content/assets/js/bootstrap.min.js"></script>*@
+    <script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Content/assets/vendors/toastify/toastify.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="~/Content/assets/vendors/select2/dist/js/select2.min.js"></script>
+    <script src="~/Content/assets/vendors/izitoast/js/iziToast.min.js"></script>
+    <script src="~/Content/DataTables/datatables.js"></script>
+    <script src="~/Content/assets/vendors/devtools/index.js"></script>
+
+    @*<script type="module">
+            //console.log('Is DevTools open:', window.devtools.isOpen);
+            if (window.devtools.isOpen == true) {
+                iziToast.question({
+                    timeout: 0,
+                    close: false,
+                    overlay: true,
+                    displayMode: 'once',
+                    id: 'question',
+                    zindex: 999,
+                    title: 'Hey',
+                    message: 'Console window detected! Please close this window and logged in again.',
+                    position: 'center',
+                    buttons: [
+                        ['<button><b>Okay</b></button>', function (instance, toast) {
+
+                            window.location.href = '/';
+
+                        }, true]
+                    ],
+                    onClosing: function (instance, toast, closedBy) {
+                        console.info('Closing | closedBy: ' + closedBy);
+                    },
+                    onClosed: function (instance, toast, closedBy) {
+                        console.info('Closed | closedBy: ' + closedBy);
+                    }
+                });
+            }
+
+            // Get notified when it's opened/closed or orientation changes
+            window.addEventListener('devtoolschange', event => {
+                console.log('Is DevTools open:', event.detail.isOpen);
+                if (event.detail.isOpen == true) {
+                    iziToast.question({
+                        timeout: 0,
+                        close: false,
+                        overlay: true,
+                        displayMode: 'once',
+                        id: 'question',
+                        zindex: 999,
+                        title: 'Hey',
+                        message: 'Console window detected! Please close this window and logged in again.',
+                        position: 'center',
+                        buttons: [
+                            ['<button><b>Okay</b></button>', function (instance, toast) {
+
+                                window.location.href = '/';
+
+                            }, true]
+                        ],
+                        onClosing: function (instance, toast, closedBy) {
+                            console.info('Closing | closedBy: ' + closedBy);
+                        },
+                        onClosed: function (instance, toast, closedBy) {
+                            console.info('Closed | closedBy: ' + closedBy);
+                        }
+                    });
+                }
+            });
+        </script>*@
+
+    <script>
+
+    </script>
+
+
+    <script>
+
+        var groupBy = function (xs, key) {
+            return xs.reduce(function (rv, x) {
+                (rv[x[key]] = rv[x[key]] || []).push(x);
+                return rv;
+            }, {});
+        };
+        load_menu_by_user();
+        function load_menu_by_user() {
+            $.ajax({
+                url: '/Accounts/GetNavbar',
+                type: "GET",
+                contentType: "application/json; charset-utf-8",
+                success: function (resp) {
+                    if (resp.error) {
+                        iziToast.error({
+                            title: 'Error!',
+                            message: 'Error',
+                            position: 'bottomRight'
+                        });
+                    }
+                    else {
+
+                        $(".user-name h6").append("Hi! " + resp.DisplayName);
+                        $(".dropdown-header").append("Hi! " + resp.DisplayName);
+                        $(".user-name p").append(resp.RoleTitle);
+                        //$(".menu").empty();
+                        var groupedNav = groupBy(resp.navtabs, ['MenuCategoryTitle']);
+
+                        console.log(groupedNav)
+
+                        $.each(groupedNav, function (index, value) {
+
+                            if (value[0].MenuCategoryTitle == "Library Setups") {
+                                $.each(value, function (index, _value) {
+
+                                    $("#" + _value.MenuItemShortName).append('<a href="/a/ls/' + _value.MenuItemShortName + '">' + _value.MenuItemName + '</a>');
+                                });
+                            }
+                            if (value[0].MenuCategoryTitle == "Users") {
+                                $.each(value, function (index, _value) {
+
+                                    $("#" + _value.MenuItemShortName).append('<a href="/a/' + _value.MenuItemShortName + '">' + _value.MenuItemName + '</a>');
+                                });
+                            }
+                            if (value[0].MenuCategoryTitle == "Admin") {
+                                $.each(value, function (index, _value) {
+
+                                    $("#" + _value.MenuItemShortName).append('<a href="/a/' + _value.MenuItemShortName + '">' + _value.MenuItemName + '</a>');
+                                });
+                            }
+                            if (value[0].MenuCategoryTitle == "Reports") {
+                                $.each(value, function (index, _value) {
+
+                                    $("#" + _value.MenuItemShortName).append('<a href="/a/rep/' + _value.MenuItemShortName + '">' + _value.MenuItemName + '</a>');
+                                });
+                            }
+
+                        });
+
+                        if ($("#LibrarySetups_ul li a").length == 0) {
+                            $("#LibrarySetups_li").remove();
+                        }
+                        if ($("#Users_ul li a").length == 0) {
+                            $("#Users_li").remove();
+                        }
+                        if ($("#Admin_li li a").length == 0) {
+                            $("#Admin_li").remove();
+                        }
+                        if ($("#Reports_li li a").length == 0) {
+                            $("#Reports_li").remove();
+                        }
+                        //console.log($("#BasicSetups_ul li ul li a").length);
+
+                    }
+                }
+            });
+        }
+
+
+    </script>
+
+
+    <script>
+        
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Content/assets/vendors/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="~/Content/assets/js/main.js"></script>
+    <script>
+
+        // Check browser support
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            // Retrieve
+            if (localStorage.getItem("menu_click") == 0) {
+                if (document.getElementById('sidebar').classList.contains('active')) {
+                    document.getElementById('sidebar').classList.remove('active');
+                    $("#menu_icon").attr("class", "bi bi-lock fs-3");
+
+                }
+            }
+            else {
+                document.getElementById('sidebar').classList.add('active');
+                $("#menu_icon").attr("class", "bi bi-unlock fs-3");
+
+            }
+
+            //if (localStorage.getItem("full_click") == 1) {
+            //    toggleFullScreen();
+            //}
+        }
+
+        //Start add buyer add event listener
+        $("#menu_icon").on("click", function () {
+
+            if (document.getElementById('sidebar').classList.contains('active')) {
+                localStorage.setItem("menu_click", "0");
+                $("#menu_icon").attr("class", "bi bi-lock fs-3");
+            }
+            else {
+                localStorage.setItem("menu_click", "1");
+                $("#menu_icon").attr("class", "bi bi-unlock fs-3");
+
+            }
+
+        });
+
+        //$("#full").on("click", function () {
+
+        //    if (localStorage.getItem("full_click") == 0) {
+        //        localStorage.setItem("full_click", "1");
+        //    }
+        //    else {
+        //        localStorage.setItem("full_click", "0");
+        //    }
+        //});
+
+    </script>
+    <script>
+        document.querySelector('#full').addEventListener('click', function () {
+            toggleFullScreen();
+        });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement &&    // alternative standard method
+                !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {  // current working methods
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
+    </script>
+    <script>
+
+        //getCountdownTimerText();
+        function getCountdownTimerText() {
+            // Set the date we're counting down to
+            var countDownDate = new Date("Feb 2, 2022 12:30:00").getTime();
+
+
+
+            iziToast.info({
+                timeout: "",
+                title: ' <div id="timer"></div>',
+                message: 'We are going to maintenance',
+                position: 'bottomRight',
+                buttons: [
+                    ['<button>Ok</button>', function (instance, toast) {
+                        instance.hide({
+                            transitionOut: 'fadeOutUp',
+                            onClosing: function (instance, toast, closedBy) {
+                                console.info('closedBy: ' + closedBy); // The return will be: 'closedBy: buttonName'
+                            }
+                        }, toast, 'buttonName');
+                    }, true]
+                ]
+            });
+
+            let timerText = "";
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in an element with id="demo"
+                if (days > 0) {
+                    timerText = days + "d " + hours + "h "
+                        + minutes + "m " + seconds + "s ";
+                }
+                else if (hours > 0) {
+                    timerText = hours + "h "
+                        + minutes + "m " + seconds + "s ";
+                }
+                else if (minutes > 0) {
+                    timerText = minutes + "m " + seconds + "s ";
+                }
+                else {
+                    timerText = seconds + "s ";
+                }
+                $("#timer").text(timerText);
+
+
+                // If the count down is over, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    timerText = "EXPIRED";
+                    $("#timer").text(timerText);
+
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

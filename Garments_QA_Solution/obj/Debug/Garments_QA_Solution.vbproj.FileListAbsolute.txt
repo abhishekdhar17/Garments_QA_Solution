@@ -1,0 +1,118 @@
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Garments_QA_Solution.dll.config
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Garments_QA_Solution.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Garments_QA_Solution.pdb
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Garments_QA_Solution.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Antlr3.Runtime.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\EntityFramework.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\EntityFramework.SqlServer.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Google.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Web.Infrastructure.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Newtonsoft.Json.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Helpers.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Mvc.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Optimization.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Razor.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.Deployment.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.Razor.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\WebGrease.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Helpers.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Mvc.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Optimization.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.Razor.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.Deployment.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\System.Web.WebPages.Razor.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Newtonsoft.Json.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Antlr3.Runtime.pdb
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\EntityFramework.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\EntityFramework.SqlServer.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Google.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.vbprojResolveAssemblyReference.cache
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.Resources.resources
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.vbproj.GenerateResource.Cache
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.pdb
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Garments_QA_Solution.dll.config
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Garments_QA_Solution.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Garments_QA_Solution.pdb
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Garments_QA_Solution.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Antlr3.Runtime.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\EntityFramework.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\EntityFramework.SqlServer.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Google.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Web.Infrastructure.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Newtonsoft.Json.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Owin.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Helpers.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Mvc.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Optimization.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Razor.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.Deployment.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.Razor.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\WebGrease.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Helpers.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Mvc.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Optimization.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.Razor.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.Deployment.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\System.Web.WebPages.Razor.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Newtonsoft.Json.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Antlr3.Runtime.pdb
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\EntityFramework.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\EntityFramework.SqlServer.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Google.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.vbprojResolveAssemblyReference.cache
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.Resources.resources
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.vbproj.GenerateResource.Cache
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.dll
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.xml
+F:\Abhishek\ADB Projects\Visual Studio 2013\Garments_QA_Solution - RND\Garments_QA_Solution\obj\Debug\Garments_QA_Solution.pdb
